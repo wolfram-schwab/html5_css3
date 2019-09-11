@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | text | webfonts </title>
+
+    <meta name="description" content="Textgestaltung Schriftgröße">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <style>
+
+      html {
+        font-family : Arial, sans-serif;
+        font-size   : 20px; /* 40px; */
+      }
+
+
+      section {
+        margin : 200px 10px;
+      }
+
+
+      ul {
+        padding : 0;
+      }
+    
+      p>span {
+        display   : inline-block;
+        background: black;
+      }
+
+      #s01 ul>li {
+        font-size : 0.8em;
+      }
+
+      #s01>p>span.prozent {
+        font-size : 50%;
+        width     : 50%; 
+      }
+
+      #s01>p>span.em {
+        font-size : 0.5em; 
+        width     : 0.5em; 
+      }
+
+      #s02 ul>li {
+        font-size : 16px;
+      }
+
+      #s02>p>span.prozent {
+        font-size : 10px;
+        width     : 10px;
+      }
+
+      #s02>p>span.em {
+        font-size : 10px; 
+        width     : 10px;
+      }
+
+      #s03 ul>li {
+        font-size : 0.8rem;
+      }
+
+      #s03>p>span.prozent {
+        font-size : 50%;
+        width     : 50%; 
+      }
+
+      #s03>p>span.em {
+        font-size : 0.5rem; 
+        width     : 0.5rem; 
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Textgestaltung</h2>
+        <h3>Schriftgrößen</h3>
+        <ol class="main_navigation">
+          <li><a href="#s01">relative Schriftgröße</a></li>
+          <li><a href="#s02">absolute Schriftgröße</a></li>
+          <li><a href="#s03">relativ zum Dokument</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+      <section id="s01">
+        <h1>relative Schriftgrößen</h1>
+        <p>beziehen sich auf das Elter-Element</p>
+        <p>Listen-Element auf 80% gesetzt:</p>
+        <ul>
+          <li>Ebene 1
+            <ul>
+              <li>Ebene 2
+                <ul>
+                  <li>Ebene 3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>50%: <span class="prozent">.</span><br/>0.5em: <span class="em">.</span></p>
+      </section>
+
+      <section id="s02">
+        <h1>absolute Schriftgrößen</h1>
+        <p>beziehen sich auf das Elter-Element</p>
+        <p>Listen-Element auf 16px gesetzt:</p>
+        <ul>
+          <li>Ebene 1
+            <ul>
+              <li>Ebene 2
+                <ul>
+                  <li>Ebene 3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>10px: <span class="prozent">.</span><br/>10px: <span class="em">.</span></p>
+      </section>
+  
+      <section id="s03">
+        <h1>relativ zum Dokument</h1>
+        <p>beziehen sich auf das Elter-Element</p>
+        <p>Listen-Element auf 0.8rem gesetzt:</p>
+        <ul>
+          <li>Ebene 1
+            <ul>
+              <li>Ebene 2
+                <ul>
+                  <li>Ebene 3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>50%: <span class="prozent">.</span><br/>0.5rem: <span class="em">.</span></p>
+      </section>
+  
+      <section id="s03">
+        <h1>Übung</h1>
+        <p>s. Folie, Übung "Schriftgrößen"</p>
+      </section>
+
+    </main>
+    
+    <aside role="complementary">
+     <h3>Ergänzend</h3>
+     <p>s. Unterlage S. 238</p>
+     <p><a href="03_Font_und_Text.ppt" download>Folie</a></p>
+
+    </aside>
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

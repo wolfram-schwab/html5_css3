@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | text | icon-fonts </title>
+
+    <meta name="description" content="Textgestaltung Schatten">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <link href="genericons/Genericons-Neue.css" rel="stylesheet">
+
+    <style>
+
+      html {
+        font-family : Arial, sans-serif;
+      }
+
+      section {
+        margin : 200px 10px;
+      }
+
+      dt {
+        width     : 10%;
+        display   : inline-block;
+        font-size : 200%;
+      }
+      dd {
+        width       : 85%;
+        display     : inline-block;
+        margin-left : 0;
+      }
+
+      .gross {
+        font-size : 150%;
+      }
+
+      #s03>p::before {
+        content : '\2192 \00a0'
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Textgestaltung</h2>
+        <h3>Symbole</h3>
+        <ol class="main_navigation">
+            <li><a href="#s01">UTF-8</a></li>
+            <li><a href="#s02">Icons als Schrift</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+
+      <section id="s01">
+        <h1>UTF-8</h1>
+        <p>Der Zeichensatz UTF-8 enthält bereits eine Menge Symbole:</p>
+        <dl>
+          <dt>&#x0261E;</dt>
+          <dd>&amp;#x0261E; bzw. &amp;#9758;</dd>
+          <dt>&#x0263A;</dt>
+          <dd>&amp;#x0263A; bzw. &amp;#9786;</dd>
+          <dt>&#x0265A;</dt>
+          <dd>&amp;#x0265A; bzw. &amp;#9818;</dd>
+          <dt>&#x02663;</dt>
+          <dd>&amp;#x02663; bzw. &amp;#9827;</dd>
+          <dt>&#x02714;</dt>
+          <dd>&amp;#x02714; bzw. &amp;#10004;</dd>
+          <dt>&#x02B08;</dt>
+          <dd>&amp;#x02B08; bzw. &amp;#11016;</dd>
+        </dl>
+        <p>s.a. <a href="https://de.wikipedia.org/wiki/Unicodeblock_Verschiedene_Symbole" target="doc">Unicodeblock Verschiedene Symbole</a><br/>
+           und <a href="https://de.wikipedia.org/wiki/Unicodeblock_Dingbats" target="doc">Unicodeblock Dingbats</a><br/>
+           und <a href="https://de.wikipedia.org/wiki/Unicodeblock_Verschiedene_Symbole_und_Pfeile" target="doc">Unicodeblock Verschiedene Symbole und Pfeile</a><br/>
+        </p>
+      </section>
+
+      <section id="s02">
+        <h1>Icons als Schrift</h1>
+        <p><span class="gross">&#x02907</span> Vektorbasiert, also Skalierbar</p>
+        <p><span class="gross">&#x02907</span> Gestaltung per CSS</p>
+        <p><span class="gross">&#x02907</span> Einbinden mit @font-face</p>
+
+        <h1>Beispiel: Genericons</h1>
+        <p>Website: <a href="http://genericons.com" target="doc">http://genericons.com</a></p>
+       </section>
+
+    </main>
+    
+    <aside role="complementary">
+     <h3>Ergänzend</h3>
+     <p>s. Unterlage S. 248&fflig;</p>
+     <p>s. a. <a href="https://kremalicious.com/make-cool-and-clever-text-effects-with-css-text-shadow/" target="demo">kremalicious</a></p>
+     <p>s. a. <a href="http://pixeltuner.de/css3-text-shadow/" target="demo">pixeltuner</a></p>
+     <p><a href="03_Font_und_Text.ppt" download>Folie</a></p>
+
+    </aside>
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

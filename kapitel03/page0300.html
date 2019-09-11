@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | text | abstände </title>
+
+    <meta name="description" content="Textgestaltung Abstände">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <style>
+
+      html {
+        font-family : Arial, sans-serif;
+        font-size   : 20px; /* 40px; */
+      }
+
+
+      section {
+        margin : 200px 10px;
+      }
+
+
+      ul {
+        padding : 0;
+      }
+
+      section>p {
+        background    : #ddd;
+      }
+
+      #s01>p {
+        margin-top    : 2rem;
+        margin-bottom : 2rem;
+      }
+    
+      #s02>p {
+        padding-top    : 2rem;
+        padding-bottom : 2rem;
+      }
+
+      #s03>p {
+        line-height    : 2rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Textgestaltung</h2>
+        <h3>Schriftgrößen</h3>
+        <ol class="main_navigation">
+            <li><a href="#s01">margin</a></li>
+            <li><a href="#s02">padding</a></li>
+            <li><a href="#s03">line-height</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+      <section id="s01">
+        <h1>Außenabstand oben/unten</h1>
+        <p>Eigenschaft: <code>margin</code></p>
+        <p>Hier: <code>margin-top : 2rem;</code><code>margin-bottom : 2rem;</code></p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+           Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </section>
+
+      <section id="s02">
+        <h1>Innenabstand oben/unten</h1>
+        <p>Eigenschaft: <code>padding</code></p>
+        <p>Hier: <code>padding-top : 2rem;</code><code>padding-bottom : 2rem;</code></p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </section>
+    
+      <section id="s03">
+        <h1>Zeilenabstand</h1>
+        <p>Eigenschaft: <code>line-height</code></p>
+        <p>Hier: <code>line-height : 2rem;</code></p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+            Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      </section>
+
+    </main>
+    
+    <aside role="complementary">
+     <h3>Ergänzend</h3>
+     <p>s. Unterlage S. 243</p>
+     <p><a href="03_Font_und_Text.ppt" download>Folie</a></p>
+
+    </aside>
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | text | webfonts </title>
+
+    <meta name="description" content="Textgestaltung">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <style>
+
+      @font-face {
+        font-family : 'Armalite';
+        src         : url("../resources/images/fonts/Armalite-Rifle/armalite_rifle.ttf")
+      }
+
+      @font-face {
+        font-family : 'Lobster';
+        src         : url("../resources/images/fonts/Lobster/Lobster-Regular.ttf")
+      }
+
+      a:hover {
+        color : hsl(0, 50%, 50%)
+      }
+
+      nav {
+        counter-reset: navi;
+      }
+
+      section {
+        margin : 200px 10px;
+      }
+
+      #s01 {
+        font-family: 'Special Elite';
+        background : #333;
+        padding    : 0.5em 1.0em;
+        color      : #ccc; 
+      }
+
+      #s02 {
+        font-family: 'Lobster';
+        background : #333;
+        padding    : 0.5em 1.0em;
+        color      : #ccc; 
+      }
+
+
+      #s03 {
+        font-family: 'Armalite';
+        background : #333;
+        padding    : 0.5em 1.0em;
+        color      : #ccc; 
+      }
+
+      ul {
+        padding : 0;
+      }
+      li {
+        list-style-type: none;
+      }
+
+      li::before {
+        counter-increment: navi;
+        content : counter(navi) ". "; 
+      }
+
+
+    </style>
+
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <h2>Textgestaltung</h2>
+      <h3>Webfonts</h3>
+
+      <nav role="navigation">
+        <ul class="main_navigation">
+          <li><a href="#s01">Google Webfonts</a></li>
+          <li><a href="#s02">Font Sqirrel</a></li>
+          <li><a href="#s03">Übung</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+      <section id="s01">
+        <h1>Google (verknüpft)</h1>
+        <p>URL: 
+          <a href="https://fonts.google.com"
+             target="extern">https://fonts.google.com</a></p>
+        <p>hier:
+          <a href="https://fonts.google.com/specimen/Special+Elite"
+             target="extern">https://fonts.google.com/specimen/Special+Elite</a></p>
+        <p>Einbinden:<br>&lt;link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet"&gt;</p>
+        <p>Verwendung:<br>font-family: 'Special Elite';</p>
+      </section>
+
+      <section id="s02">
+        <h1>Google (eingebettet)</h1>
+        <p>URL: 
+          <a href="https://fonts.google.com"
+             target="extern">https://fonts.google.com</a></p>
+        <p>hier:
+          <a href="https://fonts.google.com/specimen/Lobster?selection.family=Lobster"
+             target="extern">https://fonts.google.com/specimen/Lobster?selection.family=Lobster</a></p>
+        <pre>Einbinden:
+@font-face {
+  font-family : 'Lobster';
+  src         : url("pfad/zu/meiner/schriftdatei")
+}
+        </pre>
+        <p>Verwendung:<br>font-family: 'Lobster';</p>
+      </section>
+
+      <section id="s03">
+        <h1>Font Squirrel</h1>
+        <p>URL: 
+          <a href="https://www.fontsquirrel.com"
+             target="extern">https://www.fontsquirrel.com</a></p>
+        <p>hier: 
+           <a href="https://www.fontsquirrel.com/fonts/list/tag/stencil"
+              target="extern">https://www.fontsquirrel.com/fonts/list/tag/stencil</a></p>
+        <pre>Einbinden:
+@font-face {
+  font-family : 'Armalite';
+  src         : url(../resources/images/fonts/Armalite-Rifle/armalite_rifle.ttf)
+}
+        </pre>
+        <p>Verwendung:<br>font-family: 'Armalite', monospace;</p>
+        </section>
+
+    <section id="s03">
+      <h1>Übung</h1>
+      <p>s. Folie, Übung "Webfont"</p>
+    </section>
+
+    </main>
+    <aside role="complementary">
+     <h3>Ergänzend</h3>
+      <p><a href="03_Font_und_Text.ppt" download>Folie</a></p>
+      <p>s.a. Buch S.230&fflig;</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>zur Übersicht <a href="index.html"> Kapitel 03</a></p>
+    </footer>
+</body>
+</html>

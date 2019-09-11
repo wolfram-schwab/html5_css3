@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | text | schatten </title>
+
+    <meta name="description" content="Textgestaltung Schatten">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <style>
+
+      html {
+        font-family : Arial, sans-serif;
+      }
+
+
+      section {
+        margin : 200px 10px;
+      }
+
+
+      ul {
+        padding : 0;
+      }
+
+      section>p {
+        background    : #ddd;
+        color         : blue;
+        padding       : 1.0em;
+        text-align    : center;  
+      }
+
+      #s01>p {
+        /* offset-x | offset-y | blur-radius | color */
+        text-shadow: 2px 4px 6px red; 
+      }
+
+      #s02>p {
+        /* offset-x | offset-y | blur-radius */
+        text-shadow: 2px 4px 6px; 
+      }
+
+      #s03>p {
+        /* offset-x | offset-y | color */
+        text-shadow: 2px 4px red; 
+      }
+
+      #s04>p {
+        /* offset-x | offset-y */
+        text-shadow: 2px 4px; 
+      }
+
+      #s05>p {
+        padding          : 2.0em 0.5em;
+        background-color : black;
+        color            : black;
+        font-weight      : bold;
+        font-size        : 2.5em;
+        text-shadow      : 0px 0px 5px #ccc, -1px -1px 0 gray; 
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Textgestaltung</h2>
+        <h3>Schatten</h3>
+        <ol class="main_navigation">
+            <li><a href="#s01">alle Eigenschaften</a></li>
+            <li><a href="#s02">Verschiebung, unscharf</a></li>
+            <li><a href="#s03">Verschiebung, Farbe</a></li>
+            <li><a href="#s04">Verschiebung</a></li>
+            <li><a href="#s05">Mehrfach</a></li>
+        </ul>
+      </nav>
+
+    </header>
+    <main>
+
+      <section id="s01">
+        <h1>Verschiebung, unscharf, Farbe</h1>
+        <pre>
+            /* offset-x | offset-y | blur-radius | color */
+            text-shadow: 2px 4px 6px red;
+        </pre>
+        <p>Demo-Text</p>
+      </section>
+
+      <section id="s02">
+        <h1>Verschiebung, unscharf</h1>
+        <pre>
+            /* offset-x | offset-y | blur-radius */
+            text-shadow: 2px 4px 6px;
+        </pre>
+        <p>Demo-Text</p>
+      </section>
+
+      <section id="s03">
+        <h1>Verschiebung, Farbe</h1>
+        <pre>
+            /* offset-x | offset-y | color */
+            text-shadow: 2px 4px 6px red;
+        </pre>
+        <p>Demo-Text</p>
+      </section>
+
+      <section id="s04">
+        <h1>Verschiebung</h1>
+        <pre>
+            /* offset-x | offset-y*/
+            text-shadow: 2px 4px;
+        </pre>
+        <p>Demo-Text</p>
+      </section>
+
+      <section id="s05">
+        <h1>Mehrfach</h1>
+        <pre>
+                           /*  Schatten1       , Schatten2
+            text-shadow      : 0px 0px 5px #ccc, -1px -1px 0 gray; 
+        </pre>
+        <p>Demo-Text</p>
+      </section>
+  
+    </main>
+    
+    <aside role="complementary">
+     <h3>Ergänzend</h3>
+     <p>s. Unterlage S. 245</p>
+     <p>s. a. <a href="https://kremalicious.com/make-cool-and-clever-text-effects-with-css-text-shadow/" target="demo">kremalicious</a></p>
+     <p>s. a. <a href="http://pixeltuner.de/css3-text-shadow/" target="demo">pixeltuner</a></p>
+     <p><a href="03_Font_und_Text.ppt" download>Folie</a></p>
+
+    </aside>
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>
