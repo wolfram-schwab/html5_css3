@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | responsive design </title>
+
+    <!-- Enter a brief description of your page -->
+    <meta name="description" content="Erweiterungskurs für HTML5 und CSS">
+
+    <!-- Define a viewport to mobile devices to use 
+       - telling the browser to assume that the page is as wide as the device (width=device-width),
+         and setting the initial page zoom level to be 1 (initial-scale=1.0),
+         and fixing width=device-width for iOS9 (shrink-to-fit=no) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Add normalize.css 
+         which enables browsers to render all elements more consistently 
+         and in line with modern standards 
+         as it only targets particular styles that need normalizing -->
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5)
+         use normalize-legacy.css instead -->
+    <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
+
+    <!-- Include the site stylesheet -->
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+   
+    <style>
+      .main_navigation>li::before {
+        content : 'Abschnitt ';
+      }
+    </style>
+
+    <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+    <!--[if lt IE 9]><script src="resources/scropts/html5shiv-print.js" media="all"></script><![endif]-->
+  </head>
+
+  <body>
+
+    <!-- The page header typically contains items 
+         such as your site heading, logo 
+         and possibly the main site navigation -->
+    <!-- ARIA: the landmark role "banner" is set 
+         as it is the prime heading or internal title of the page -->
+    <header role="banner">
+
+        <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+
+        <!-- ARIA: the landmark role "navigation" is added here
+                   as the element contains site navigation
+             NOTE: The <nav> element does not have to be contained within a <header> element,
+                   even though the two examples on this page are. -->
+        <nav role="navigation">
+          <h2>Responsive Design</h2>
+          <ol>
+            <li><a href="page0100.html">Klassischer Workflow</a></li>
+            <li><a href="page0200.html">Heutige Situation</a></li>
+            <li><a href="page0300.html">Begriffe</a></li>
+            <li><a href="page0400.html">Methodik</a></li>
+            <li><a href="page0500.html">"ältere Browser"</a></li>
+          </ol>
+        </nav>
+
+    </header>
+        <aside role="complementary">
+
+          <!-- A <header> element is not required here 
+               as the heading only contains a single <h3> element -->
+          <h3>Ergänzend</h3>
+
+          <!-- Content -->
+          <p><a href="06_Responsive_Design.ppt" download>Folie</a></p>
+
+        </aside>
+
+    </div>
+
+    <!-- The main page footer can contain items such as copyright and contact information.
+         It can also contain a duplicated navigation of your site
+         which is not usually contained within a <nav> -->
+    <!-- ARIA: the landmark role "contentinfo" is added here 
+         as it contains metadata that applies to the parent document -->
+    <footer role="contentinfo">
+      <p><a href="../index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>
