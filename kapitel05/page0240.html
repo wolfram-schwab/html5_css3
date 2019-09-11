@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | flex</title>
+
+    <meta name="description" content="Box-Layout  dispaly:flex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+   
+    <style>
+      * { box-sizing : border-box; }
+
+      #flex {
+        display           : flex;
+
+        margin            : 10em 0;
+        border            : solid 1px red;
+        padding-top       : 20px;
+        background-image  : url(../resources/images/massstab.png);
+        background-repeat : repeat-x;
+        min-height        : 10rem;
+      }
+
+      #flex:hover {
+        flex-wrap : wrap;
+      }
+      #flex:hover section {
+        flex-grow :1;
+      }
+
+      section {
+        border     : solid 1px gray;
+        background : silver;
+      }
+
+      section h1 {
+        margin-top : 0;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <h2>Flex kein Flax</h2>
+      <h3>Umbrüche</h3>
+      <nav role="navigation">
+      </nav>
+
+    </header>
+    
+    
+    <main>
+      <article>
+        <p>Standard: keine Umbrüche</p>
+        <p><strong>:hover</strong> <code>flex-wrap:wrap</code> <code>flex-grow:1</code></p>
+      </article>
+
+      <div id="flex">
+        <section id="s01">
+          <h1>Box 1</h1>
+        </section>
+
+        <section id="s02">
+          <h1>Box 2</h1>
+          <p>ein wenig Text</p>
+        </section>
+
+        <section id="s03">
+          <h1>Box 3</h1>
+          <p>etwas Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua.</p>
+        </section>
+
+        <section id="s04">
+          <h1>Box 4</h1>
+          <p>viel Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+              sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua.</p>
+            </section>
+
+        <section id="s05">
+          <h1>Box 5</h1>
+        </section>
+      </div>
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="page0200.html">zurück</a> zur Übersicht Flexbox</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | flex</title>
+
+    <meta name="description" content="Box-Layout  dispaly:flex">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <style>
+      #flex {
+        display           : flex;
+        margin            : 10em 0;
+        border            : solid 1px red;
+        padding-top       : 20px;
+        background-image  : url(../resources/images/massstab.png);
+        background-repeat : repeat-x;
+        min-height        : 10rem;
+      }
+
+      section {
+        border     : solid 1px gray;
+        background : silver;
+      }
+
+      section h1 {
+        margin-top : 0;
+      }
+
+      #s03>h1~p {
+        display : none;
+      }
+
+      #s03:hover>h1~p {
+        display : block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <h2>Flex kein Flax</h2>
+      <nav role="navigation">
+      </nav>
+
+    </header>
+    
+    
+    <main>
+      <article>
+        <h1>Standardverhalten</h1>
+        <ul>
+          <li>Die Ausrichtung ist horizontal und linksbündig<br/>
+              (in Ländern mit anderen Leserichtungen möglicherweise andersherum)</li>
+          <li>Der Container wird vertikal gefüllt</li>
+          <li>Alle Elemente behalten die Breite,
+              die sie benötigen;<br/>
+              es erfolgt kein horizontales Auffüllen,
+              werden aber möglicherweise schmaler.<br/>
+              <code>flex-basis : auto;</code><br/>
+              (Box 3 hover)
+          </li>
+          <li>es erfolgt kein Umbruch der Boxen<br/>
+              <code>flex-wrap : nowrap;</code></li>
+        </ul>
+      </article>
+
+      <div id="flex">
+        <section id="s01">
+          <h1>Box 1</h1>
+        </section>
+
+        <section id="s02">
+          <h1>Box 2</h1>
+        </section>
+
+        <section id="s03">
+          <h1>Box 3</h1>
+          <p>etwas Text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua.</p>
+        </section>
+
+        <section id="s04">
+          <h1>Box 4</h1>
+        </section>
+
+        <section id="s05">
+          <h1>Box 5</h1>
+        </section>
+      </div>
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="page0200.html">zurück</a> zur Übersicht Flexbox</p>
+    </footer>
+
+  </body>
+</html>

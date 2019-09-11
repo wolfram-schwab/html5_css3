@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | layout </title>
+
+    <meta name="description" content="Erweiterungskurs für HTML5 und CSS Layouts heute">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+
+    <style>
+      * { box-sizing  : border-box; }
+
+      html {
+        font-family : sans-serif;
+        background  : hsl(0, 0%, 90%);
+      }
+
+      body {
+        width : 960px;
+        margin    : 0 auto;
+        background: white;
+      }
+
+      header {
+        background : hsl(60, 50%, 70%);
+        text-align : center;
+        width      : 100%;
+      }
+      header h1 {
+        margin-top : 0;
+      }
+
+      header, nav, aside, main, footer {
+        padding : 0.5rem 1.0rem;
+      }
+
+      nav {
+        background: hsl(100, 50%, 70%);
+      }
+
+      aside {
+        background : hsl(140, 50%, 80%);
+        text-align : right;
+      }
+
+      main {
+        background   : hsl(180, 50%, 70%);
+        text-align   : justify;
+      }
+
+      footer {
+        clear : both;
+        width : 100%;
+        background: hsl(220, 50%, 70%)
+      }
+
+      footer>p>a:last-of-type {
+        display : block;
+        float   : right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <h2>Vergleich verschiedener Layout-Techniken</h2>
+      <h3>Positionierung</h3>
+    </header>
+    
+    <main>
+      <section>
+        <h1>Ausgangslage</h1>
+        <p>Alles hintereinander weg....</p>
+      </section>
+      <section>
+        <h1>main, nav, aside</h1>
+        <p>Dimensionieren</p>
+      </section>
+      <section>
+        <h1>main</h1>
+        <p>"zentrieren"</p>
+      </section>
+      <section>
+        <h1>Nav</h1>
+        <p>links daneben</p>
+      </section>
+      <section>
+        <h1>aside</h1>
+        <p>rechts daneben</p>
+      </section>
+    </main>  
+
+    <aside role="complementary">
+      
+      <h3>Ergänzend</h3>
+      <p>s.a. Unterlage S.47 und S.475&fflig; (Holy Grail)</p>
+      <p><a href="https://en.wikipedia.org/wiki/Holy_grail_(web_design)" target="extern">Holy Grail</a> Wikipedia</p>
+      
+    </aside>
+    
+    <nav role="navigation">
+      <h1>Navigation</h1>
+      <ol>
+        <li><a href="page0100.html">Übersicht Layout</a></li>
+        <li><a href="page0110.html">Float-Layout - Füher</a></li>
+        <li><a href="page0120.html">Content First</a></li>
+        <li><a href="page0130.html">Tabellen</a></li>
+        <li><a href="page0140.html">Positionierung</a></li>
+      </ol>
+    </nav>
+    
+    <footer role="contentinfo">
+      <p><a href="page0100.html">&lt;&lt;zurück</a> zu Vergleich <a href="page0141.html">Größen zuweisen&gt;&gt;</a></p>
+    </footer>
+  </body>
+</html>
