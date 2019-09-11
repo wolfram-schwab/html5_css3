@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | rollen</title>
+    <meta name="description" content="Bereiche in HTML5">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      body {
+        min-height : 2000px;
+      }
+      
+      ul li {
+        display : inline-block;
+        width   : 7em;
+        padding : 0.25em 0.5em;
+        border  : solid 1px silver;
+        text-align : center;
+      }
+      
+      header, main, aside, footer {
+        margin-bottom : 10em;
+      }
+      
+      footer p:last-child {
+        text-align : right;
+        padding1    : 2em;
+        position   : fixed;
+        bottom     : 0;
+        right      : 0;
+        background  : yellow;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="header" role="banner">
+      <h1>ARIA Landmark Roles</h1>
+      <h2>Der Kopfbereich (role="banner")</h2>
+      
+      <nav id="nav" role="navigation">
+        <h3>Seitennavigation (role="navigation")</h3>
+        <ul>
+          <li><a href="#header">header</a></li>
+          <li><a href="#main">main</a></li>
+          <li><a href="#nav">nav</a></li>
+          <li><a href="#section">section</a></li>
+          <li><a href="#article">article</a></li>
+          <li><a href="#aside">aside</a></li>
+          <li><a href="#footer">footer</a></li>
+        </ul>
+      </nav>
+      <form action="https://duckduckgo.com/" target="extern">
+        <fieldset>
+          <legend>Suchfeld</legend>
+          <p><label>Suche nach: 
+             <input type="text" value="ARIA Landmark" name="q" maxlength="30"/></label>
+             <input type="submit" value="suchen"/>
+          </p> 
+        </fieldset>
+      </form>
+    </header>
+    
+    <main id="main" role="main">
+      <h1>Hauptinhalt (role="main")</h1>
+      <section id="section" role="region">
+        <h1>Abteilung 1 (role="region")</h1>
+        <p>Bereich mit thematisch zusammengehörigen Artikeln</p>
+        <p>vergleichbar mit den Hauptteilen einer Zeitung wie "Sport", "Politik" und "Wetter"</p>
+        
+        <article id="article" role="article, document">
+          <h1>Artikel 1 in Abteilung 1 (role="article, document")</h1>
+        </article>
+      </section>
+      
+    </main>
+    
+    <aside id="aside" role="note, complementary">
+      <h1>Sonstiges (role="note, complementary")</h1>
+      <p>s.a. Buch S.78</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <h1>Fußnoten (role="contentinfo")</h1>
+      <p>Redaktionelles, Kontakt, Impressum etc...</p>
+      <p>nach <a href="#header">oben</a><br>
+         zur Übersicht <a href="index.html">Kapitel 01</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | viewport</title>
+    <meta name="description" content="der Viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      label {
+        display    : inline-block;
+        width      : 10vw;
+        text-align : right;
+      }
+    </style>
+
+    <script src="../resources/scripts/size.js" defer></script>
+    <script src="../resources/scripts/viewport.js" defer></script>
+
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML5 Meta-Viewport</h1>
+    </header>
+    <main>
+      <p>Verhalten mobiler Geräte...</p>
+      <p>Beispielansicht S.70 Buch</p>
+
+      <fieldset>
+        <legend>Viewport</legend>
+        <p><label>Breite: </label>
+           <select id="width-select">
+             <option value="device-width">device-width</option>
+             <option value="1000">1000</option>
+             <option value="600">600</option>
+             <option value="400">400</option>
+           </select></p>
+        <p><label>Skalierung: </label>
+           <select id="scale-select">
+             <option value="0.5">0.5</option>
+             <option value="1.0">1.0</option>
+             <option value="2.0">2.0</option>
+           </select></p>
+        <p><label>Anpassung: </label>
+           <input type="radio" name="shrink" id="shrinkOn" value="on"/>Ein
+           <input type="radio" name="shrink" id="shrinkOff" value="off"/>Aus</p>
+        
+      </fieldset>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+      <p>Viewport bei 
+         <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag"
+            target="extern"/>MDN</a>
+      <p><a href="01_Grundgeruest.ppt" download>Folie</a></p>
+      <p>s.a. Buch S.69f</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>Breite: <span id="width">---</span> / Höhe: <span id="height">---</span></p>
+      <p>zur Übersicht <a href="index.html">Kapitel 01</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | normalizer</title>
+    <meta name="description" content="Normalisierung der Stile">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <style>
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML5 Normalizer</h1>
+    </header>
+    <main>
+      <ul>
+        <li>Frei verfügbar unter: 
+           <a href="https://necolas.github.io/normalize.css"
+              target="extern">https://necolas.github.io/normalize.css</a></li>
+        <li>Angleichung der Darstellung in unterschiedlichen Browsern</li>
+        <li>Korrektur von Bugs / Inkonsistenzen</li>
+        <li>Ergänzen mit eigenen Styles</li>
+      </ul>
+      <p><input type="button" id="mit" value ="mit Normalizer"/>
+         <input type="button" id="ohne" value ="ohne Normalizer"/>
+      <p>zur Übersicht <a href="index.html">Kapitel 01</a></p>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+      <p><a href="01_Grundgeruest.ppt" download>Folie</a></p>
+      <p>s.a. Buch S.66 und S.184</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>zur Übersicht <a href="index.html">Kapitel 01</a></p>
+    </footer>
+  
+  </body>
+  
+  <script>
+    var styleElement = document.getElementById("style");
+    document.getElementById("mit")
+            .addEventListener("click", function() {
+                                         styleElement.setAttribute("href", "../resources/styles/normalize.css");
+                                       });
+    document.getElementById("ohne")
+            .addEventListener("click", function() {
+                                         styleElement.setAttribute("href", "");
+                                       });
+  </script>
+</html>
