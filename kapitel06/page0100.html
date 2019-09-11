@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | media-queries </title>
+
+    <meta name="description" content="Erweiterungskurs für HTML5 und CSS Mediaqueries">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <script src="../resources/scripts/size.js" defer></script>
+   
+    <style>
+
+      @media screen {
+        #media::before {
+          content : "Screen";
+        }
+      }
+
+      @media print {
+        #media::before {
+          content : "Print";
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        #media::before {
+          content : "Screen schmal";
+        }
+      }
+
+      @media screen and (orientation: landscape) {
+        #media::before {
+          content : "Screen Landschaft";
+        }
+      }
+
+      @media screen and (orientation: portrait) {
+        #media::before {
+          content : "Screen Portrait";
+        }
+      }
+
+      body {
+        min-height: 2000px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+        <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+        <h2>Media-Queries</h2>
+        <h3>Typ und Eigenschaften</h3>
+        <p>zur Zeit: <span id="media"> </span></p>
+
+        <nav role="navigation">
+          <h1>Seitennavigation</h1>
+          <ul>
+            <li><a href="#s01">Einsatz</a></li>
+            <li><a href="#s02">Funktionen</a></li>
+            <li><a href="#s03">Beispiel</a></li>
+          </ul>
+        </nav>
+
+    </header>
+
+    <main>
+      <section>
+        <h1 id="s01">Einsatz</h1>
+        <p>bei</p>
+        <ul>
+          <li>link-Element</li>
+          <li>@import</li>
+          <li>@media</li>
+        </ul>
+      </section>
+
+      <section>
+        <h1 id="s02">Funktionen</h1>
+        <p>Abfrage von</p>
+        <ul>
+          <li>Medientyp (screen, print, all, ...)</li>
+          <li>Medieneigenschaften
+            <ul>
+              <li><em>width</em> (max-, min-) : Längenwert</li>
+              <li><em>height</em> (max-, min-) : Längenwert</li>
+              <li><em>orientation</em> : portrait | landscape</li>
+              <li><em>resolution</em> : #dpi</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+          <h1 id="s03">Beispiel</h1>
+          <pre>
+              @media screen and (max-width: 600px) {
+                html {
+                  background : red;
+                }
+              }
+          </pre>
+      </section>
+
+    </main>
+    
+    <aside role="complementary">
+
+      <h3>Ergänzend</h3>
+      <p>s.a. Unterlage S.292&fflig;</p>
+      <p><a href="05_Media_Queries.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+    <p id="size">width: <span id="width">---</span>, height: <span id="height">---</span></p>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | layout </title>
+
+    <meta name="description" content="Erweiterungskurs für HTML5 und CSS Layouts heute">
+    <!-- meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" -->
+
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+
+    <script src="../resources/scripts/size.js" defer></script>
+
+    <style>
+      * { box-sizing  : border-box; }
+
+      html {
+        font-family : sans-serif;
+        background  : hsl(0, 0%, 90%);
+      }
+
+      body {
+        max-width : 960px;
+        margin    : 0 auto;
+        background: white;
+      }
+
+      header {
+        background : hsl(60, 50%, 70%);
+        text-align : center;
+        /* width      : 100%; */
+      }
+      header h1 {
+        margin-top : 0;
+      }
+
+      header, nav, aside, main, footer {
+        padding : 0.5rem 1.0rem;
+      }
+
+      nav {
+        background: hsl(100, 50%, 70%);
+      }
+
+      aside {
+        background : hsl(140, 50%, 80%);
+        text-align : right;
+      }
+
+      main {
+        background   : hsl(180, 50%, 70%);
+        text-align   : justify;
+      }
+
+      footer {
+        clear : both;
+        /* width : 100%; */
+        background: hsl(220, 50%, 70%)
+      }
+
+      /* Flexbox I */
+      body {
+        display   : flex;
+        flex-wrap : wrap;
+      }
+
+      header {
+        order : -1;
+        flex  : 1 0 100%;
+      }
+
+      footer {
+        order : 10;
+        flex  : 1 0 100%;
+      }
+
+      nav {
+        order : 1;
+        flex  : 1 0 20%;
+      }
+
+      main {
+        order : 2;
+        flex  : 1 0 65%;
+      }
+
+      aside {
+        order : 3;
+        flex  : 1 0; /* 14%; */
+      }
+      
+      #size {
+        order : 100;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header role="banner">
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <h2>Vergleich verschiedener Layout-Techniken</h2>
+      <h3>Flexbox</h3>
+    </header>
+
+    <main>
+      <section>
+        <h1>Variante I</h1>
+        <p>Seite ohne Angabe von Viewport im <span class="tag">meta</span>-Tag</p>
+      </section>
+      <section>
+        <h1>Flexbox</h1>
+        <p>semantische Bereichselemente <span class="tag">header</span>, <span class="tag">main</span>,  <span class="tag">footer</span>, 
+          <span class="tag">nav</span>, <span class="tag">aside</span>, <span class="tag">section</span>, <span class="tag">article</span>.</p>
+        <p>Dokumentreihenfolge: Überschriften, Hauptinhalt, Navigation, Sonstiges, Fußbereich</p>
+        <p><strong>==>> Content First!!!</strong></p>
+        <p>Trotzdem: Navigation links, Sonstiges rechts, Inhalt dazwischen.</p>
+      </section>
+      
+      <section>
+        <h1>Content First</h1>
+        <p>main, aside, nav</p>
+      </section>
+    </main>  
+
+    <aside role="complementary">
+      
+      <h3>Ergänzend</h3>
+      <p>s.a. Unterlage S.47 und S.475&fflig; (Holy Grail)</p>
+      <p><a href="https://en.wikipedia.org/wiki/Holy_grail_(web_design)" target="extern">Holy Grail</a> Wikipedia</p>
+      
+    </aside>
+    
+    <nav role="navigation">
+      <h1>Navigation</h1>
+      <ol>
+        <li><a href="page0300.html">Übersicht Flexibles Grid</a></li>
+        <li><a href="page0310.html">ohne Viewport-Angabe</a></li>
+        <li><a href="page0320.html">Mit Viewport-Angabe</a></li>
+        <li><a href="page0330.html">Mediaquery</a></li>
+      </ol>
+    </nav>
+
+    <!-- /div -->
+    
+    <footer role="contentinfo">
+      <p><a href="page0300.html">&lt;&lt;zurück</a> zu Flexbox <a href=""></a></p>
+    </footer>
+    
+    <p id="size">width: <span id="width">---</span>, height: <span id="height">---</span></p>
+    
+  </body>
+</html>
