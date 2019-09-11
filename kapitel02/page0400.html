@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | counter</title>
+    <meta name="description" content="HTML5/CSS Counter">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      #div01 {
+        counter-reset: counter01;
+      }
+
+      #div01>p::before {
+        counter-increment : counter01;
+        content           : counter(counter01) ". "; 
+      }
+
+      #div02 {
+        counter-reset: counter02 1000;
+      }
+
+      #div02>p::after {
+        counter-increment : counter02 10;
+        content           :" Kd-Nr: " counter(counter02);
+      }
+
+      #div03 {
+        counter-reset: counter03;
+      }
+
+      #div03 ul{
+        padding : 0;
+      }
+
+      #div03 li {
+        list-style        : none;
+        counter-increment : counter03;
+      }
+
+      #div03 li:nth-child(1)::before {
+        content : counter(counter03, decimal) " -> ";
+      }
+
+      #div03 li:nth-child(2)::before {
+        content : counter(counter03, upper-alpha) " -> ";
+      }
+
+      #div03 li:nth-child(3)::before {
+        content : counter(counter03, upper-roman) " -> ";
+      }
+
+      #div03 li:nth-child(4)::before {
+        content : counter(counter03, lower-greek) " -> ";
+      }
+
+      #div04 {
+        counter-reset : abschnitt;
+      }
+
+      #div04>div {
+        counter-increment : abschnitt;
+        counter-reset     : absatz;
+      }
+
+      #div04 h4::after {
+        content : " " counter(abschnitt, upper-roman);
+      }
+      #div04 p::before {
+        counter-increment : absatz;
+        content           : "§" counter(abschnitt) "." counter(absatz) " ";
+      }
+
+      #div05 ul {
+        list-style-type : none;
+        padding         : 0;
+        padding-bottom  : 0.5em;
+        counter-reset   : liste;
+      }
+
+      li::before {
+        counter-increment: liste;
+        content          : counters(liste, ".") ": ";
+        display          : inline-block;
+        width            : 3em;
+      }
+
+      div {
+        width      : 80%;
+        margin     : auto;
+        border     : solid 1px gray;
+        background : hsl(60, 50%, 80%);
+        padding    : 0rem 1.0rem;
+      }
+
+      div>div {
+        width      : 100%;
+        border     : none;
+        background : transparent;
+      }
+
+      article,
+      section {
+        margin-top : 3rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Counter</h1>
+    </header>
+    <main>
+      <section>
+        <h2>Definition</h2>
+        <p>Im Prinzip sind <code>counter</code> Variable,
+           die von <abbr title="Cascading Style Sheets">CSS</abbr>
+           zur Verfügung gestellt werden.</p>
+        <article>
+          <h3>Initialisierung</h3>
+          <p>Die Initialisierung erfolgt über die CSS-Eigenschaft</p>
+          <p><code>counter-reset : <i>name</i></code></p>
+        </article>
+        <article>
+          <h3>Inkrementierung</h3>
+          <p>Die Inkrementierung erfolgt über die CSS-Eigenschaft</p>
+          <p><code>counter-increment : <i>name</i></code></p>
+          <p>Immer dann, wenn die Auswertung des Stylesheets über diese
+             Anweisung läuft, wird der Zähler um eins erhöht.</p>
+        </article>
+        <article>
+          <h3>Darstellung</h3>
+          <p>Die Darstellung erfolgt in einem Pseudo-Element
+             über den Eigenschafts<strong>wert</strong>!</p>
+          <p><code>counter(<i>name</i>)</code></p>
+        </article>
+        <article>
+          <h3>Beispiel</h3>
+          <p>Der folgende Abschnitt&nbsp;&ndash;&nbsp;ausgezeichnet als <code>&lt;div&gt;</code>&nbsp;&ndash;&nbsp;
+             enthält die folgenden CSS-Regel:</p>
+          <p><code>counter-reset: counter01;</code></p>
+          <p>Die eingeschachtelten Absätze erhalten das Pseudo-Element <code>::before</code>
+             und die beiden Regeln:</p>
+          <p><code>counter-increment: counter01;<br/>
+                   content : counter(counter01) ". ";</code></p>
+          <div id="div01">
+            <p>Ein Absatz</p>
+            <p>Noch ein Absatz</p>
+            <p>Ein letzter Absatz</p>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h2>Anpassungen</h2>
+        <p>Sowohl Startwert als auch die Schrittweite
+           lassen sich individualisieren</p>
+        </p>
+        <article>
+          <h3>Startwert</h3>
+          <p>Der Startwert kann an den Namen des Zählers angehängt werden</p>
+          <p><code>counter-reset : <i>name</i> <i>startwert</i></code></p>
+        </article>
+        <article>
+          <h3>Schrittweite</h3>
+          <p>Ähnlich erfolgt die Angabe der Schrittweite beim Inkrementieren</p>
+          <p><code>counter-increment : <i>name</i> <i>schrittweite</i></code></p>
+        </article>
+        <article>
+          <h3>Beispiel</h3>
+          <p>Der folgende Abschnitt&nbsp;&ndash;&nbsp;ausgezeichnet als <code>&lt;div&gt;</code>&nbsp;&ndash;&nbsp;
+             enthält die folgenden CSS-Regel:</p>
+          <p><code>counter-reset: counter02 1000;</code></p>
+          <p>Die eingeschachtelten Absätze erhalten das Pseudo-Element <code>::after</code>
+             und die beiden Regeln:</p>
+          <p><code>counter-increment: counter02 10;<br/>
+                   content :" Kd-Nr: " counter(counter02);</code></p>
+          <div id="div02">
+            <h4>Kunden</h4>
+            <p>Meier</p>
+            <p>Müller</p>
+            <p>Schmidt</p>
+          </div>
+        </article>
+        <article>
+          <h3>Stil</h3>
+          <p>Des Weiteren lässt sich bei der Ausgabe auch noch der Stil der Ausgabe ändern;<br/>
+             und zwar über den Wert</p>
+          <p><code>counter(<i>name</i>, <i>stil</i></code>)</p>
+          <p>Mögliche Werte sind (u.a.):</p>
+          <div id="div03">
+            <ul>
+              <li>decimal</li>
+              <li>upper-alpha</li>
+              <li>upper-roman</li>
+              <li>lower-greek</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <section>
+        <h2>Zähler schachteln</h2>
+        <article>
+          <h3>unterschiedliche Elemente</h3>
+          <p>Im Folgenden Kasten befinden sich mehrere Abschnitte (<code>div</code>)
+            mit jeweils mehreren Absätzen(<code>p</code>).</p>
+          <p>Sowohl jeder Abschnitt als auch jeder Absatz hat seinen eigenen Zähler.
+            In jedem Abschnitt wird der Absatz-Zähler zurückgesetzt:</p>
+          <div id="div04">
+            <div>
+              <h4>Abschnitt</h4>
+              <p>Absatz</p>
+              <p>Absatz</p>
+              <p>Absatz</p>
+            </div>
+            <div>
+              <h4>Abschnitt</h4>
+              <p>Absatz</p>
+              <p>Absatz</p>
+              <p>Absatz</p>
+            </div>
+            <div>
+              <h4>Abschnitt</h4>
+              <p>Absatz</p>
+              <p>Absatz</p>
+              <p>Absatz</p>
+            </div>
+          </div>
+        </article>
+        <article>
+          <h3>Gleichartige Elemente</h3>
+          <p>Wenn mehrere geschachtelte, gleichartige Elemente einen Zähler
+             mit demselben Namen initialisieren, 
+             erhält dennoch jedes Element seinen eigenen Zähler.</p>
+          <p>Mit der Eigenschaft <code>counters(<i>name</i>, <i>seperator</i>)</code>
+             lassen alle Zähler in der Hierarchie aufrufen.
+             Auf diese Weise lassen sich hierarchische Gliederungen realisieren.</p>
+          <p>Der Aufruf erfolgt jeweils von außen nach innen:</p>
+          <div id="div05">
+            <ul>
+              <li>Landfahrzeuge
+                <ul>
+                  <li>Kraftfahrzeuge
+                    <ul>
+                      <li>Motorrad</li>
+                      <li>PKW</li>
+                      <li>LKW</li>
+                    </ul>
+                  </li>
+                  <li>Sonstige
+                    <ul>
+                      <li>Fahrrad</li>
+                      <li>Dreirad</li>
+                      <li>Tretroller</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Luftfahrzeuge
+                <ul>
+                  <li>Ballon</li>
+                  <li>Zeppelin</li>
+                  <li>Flugzeuge
+                    <ul>
+                      <li>Segler</li>
+                      <li>Motorflugzeug</li>
+                      <li>Düsenflugzeug</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+      <p><a href="02_Selektoren.ppt" download>Folie</a></p>
+      <p>s.a. 
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters"
+           target="doc">Mozilla Developer Network</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>zur Übersicht <a href="index.html">Kapitel 02</a></p>
+    </footer>
+  </body>
+</html>

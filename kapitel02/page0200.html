@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | selektoren</title>
+    <meta name="description" content="HTML5 Grundgerüst">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      div {
+        background  : #edc;
+        margin-left : 2.0rem;
+        padding     : 0.25rem 1.0rem;
+      }
+      #descendant div ul li { list-style : square }
+      #child      div>ul>li { list-style : square }
+      #next       h4+p { font-style : italic; }
+      #following  h4~p { font-style : italic; }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Selektoren</h1>
+      <h2>Kontextuelle Selektoren</h2>
+      <p>Auswahl von Elementen anhand des jeweiligen Kontexts</p>
+      <ul>
+        <li>Kind (unmittelbar eingeschachtelt)</li>
+        <li>Nachfahre (auch in tiefergelegenen Ebenen)</li>
+        <li>nächstes Geschwister</li>
+        <li>alle folgenden Geschwister</li>
+      </ul>
+    </header>
+
+    <main>
+      <hr>
+      <section id="descendant">
+        <h3>Nachkommen-Selektor</h3>
+        <dl>
+          <dt>Symbol</dt>
+          <dd>Leerraum</dd>
+          <dt>Muster</dt>
+          <dd>vorfahre nachkomme</dd>
+          <dt>Eigenschaft</dt>
+          <dd>Listenelement mit Quadrat-Symbol</dd>
+          <dt>Code</dt>
+          <dd><code>div ul li { list-style : square }</code></dd>
+        </dl>
+        <div>
+          <h4>Beispiel (in div geschachtelt)</h4>
+          <ul>
+            <li>Eintrag 1</li>
+            <li>eingeschachtelte Liste
+              <ul>
+                <li>Untereintrag 1</li>
+                <li>Untereintrag 2</li>
+              </ul>
+            </li>
+            <li>Eintrag 3</li>
+          </ul>
+        </div>
+      </section>
+      <hr>
+
+      <section id="child">
+        <h3>Kind-Selektor</h3>
+        <dl>
+          <dt>Symbol</dt>
+          <dd>&gt;, Größer-Zeichen</dd>
+          <dt>Muster</dt>
+          <dd>elter&gt;kind</dd>
+          <dt>Eigenschaft</dt>
+          <dd>Listenelement mit Quadrat-Symbol</dd>
+          <dt>Code</dt>
+          <dd><code>div>ul>li { list-style : square }</code></dd>
+        </dl>
+        <div>
+          <h4>Beispiel (in div geschachtelt)</h4>
+          <ul>
+            <li>Eintrag 1</li>
+            <li>eingeschachtelte Liste
+              <ul>
+                <li>Untereintrag 1</li>
+                <li>Untereintrag 2</li>
+              </ul>
+            </li>
+            <li>Eintrag 3</li>
+          </ul>
+        </div>
+      </section>
+      <hr>
+
+      <section id="next">
+        <h3>Nächstes-Geschwister-Selektor</h3>
+        <dl>
+          <dt>Symbol</dt>
+          <dd>+, Plus-Zeichen</dd>
+          <dt>Muster</dt>
+          <dd>element+naechstesGeschwister</dd>
+          <dt>Eigenschaft</dt>
+          <dd>Text kursiv</dd>
+          <dt>Code</dt>
+          <dd><code>h4+p { font-style : kursiv; }</code></dd>
+        </dl>
+        <div>
+          <p>Absatz im div vor Überschrift</p>
+          <h4>Beispiel (in div geschachtelt)</h4>
+          <p>Absatz 1</p>
+          <p>Absatz 2</p>
+          <p>Absatz 3</p>
+        </div>
+      </section>
+      <hr>
+
+      <section id="following">
+        <h3>Folgende-Geschwister-Selektor</h3>
+        <dl>
+          <dt>Symbol</dt>
+          <dd>~, Tilde-Zeichen</dd>
+          <dt>Muster</dt>
+          <dd>element~folgendeGeschwister</dd>
+          <dt>Eigenschaft</dt>
+          <dd>Text kursiv</dd>
+          <dt>Code</dt>
+          <dd><code>h4~p { font-style : kursiv; }</code></dd>
+        </dl>
+        <div>
+          <p>Absatz im div vor Überschrift</p>
+          <h4>Beispiel (in div geschachtelt)</h4>
+          <p>Absatz 1</p>
+          <p>Absatz 2</p>
+          <p>Absatz 3</p>
+        </div>
+      </section>
+      <hr>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+      <p><a href="02_Selektoren.ppt" download>Folie</a></p>
+      <p>s.a. Buch S.208&fflig;</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>zur Übersicht <a href="index.html">Kapitel 02</a></p>
+    </footer>
+  </body>
+</html>

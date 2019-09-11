@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | pseudo-elemente</title>
+    <meta name="description" content="HTML5 Grundgerüst">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      li {
+        list-style : none;
+      }
+
+      li::before {
+        content : '+ ';
+      }
+
+      #a01>h1+p::before {
+        content : "Absatz 1: ";
+        font-weight : bold;
+      }
+
+      #a01 ul>li::before {
+        content : '\2714';
+      }
+
+      #a02>p>span::after {
+        content : url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Vincent_van_Gogh_signature_%28Vincent%29.svg/64px-Vincent_van_Gogh_signature_%28Vincent%29.svg.png);
+      }
+
+      #a03>p>a::after {
+        content         : "("attr(href)")";
+        text-decoration : none;
+        color           : black;
+      }
+
+      #a04>h1+p::first-letter {
+        font-size   : 3.0em;
+        font-weight : bold;
+        float       : left;
+        padding     : 0.5rem 0.5rem 0.5rem 0;
+        color       : red;
+      }
+
+      #a04 p>a::after {
+        content : attr(href);
+      }
+
+      #a05>h1+p::first-line {
+        font-weight : bold;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Pseudo-Elemente</h1>
+      <p>Mit Pseudoelementen lassen sich einem Dokument
+         zum Einen zusätzliche Inhalte hinzufügen
+         oder zum Anderen Textteile auszeichnen,
+         die sonst nur schwer zugänglich sind
+      </p>
+    </header>
+    
+    <main>
+      <section>
+        <h1>Zusätzlicher Inhalt</h1>
+        <p>lässt sich sowohl am Anfang als auch am Ende eines Elements hinzufügen.
+          <br>Die Syntax lautet:</p>
+        <p><code><i>selektor</i>::before</code> bzw. <code><i>selektor</i>::after</code></p>
+        <p>Hinzufügen lassen sich:</p>
+        <ul>
+          <li>weiterer Text</li>
+          <li>Grafiken</li>
+          <li>Attributwerte</li>
+        </ul>
+        <p>Der zusätzliche Inhalt wird über die Eigenschaft <code>content</code> definiert.</p>
+
+        <article id="a01">
+          <h1>Text</h1>
+          <p>wurde hinzugefügt.</p>
+          <p>Mit der CSS-Anweisung:</p>
+          <code>h1+p::before { content : "Absatz 1: "; font-weight : bold; }</code>
+          <p>Textuelle Inhalte sind <em>immer</em> gequotet "text" oder 'text'!</p>
+          <article>
+            <h1>Sonderzeichen</h1>
+            <p>Sonderzeichen werden mit einem \Backslash
+              gefolgt vom utf-8 Code im laufenden Text kodiert</p>
+            <ul>
+              <li> li::before {
+                  content : '\2714'
+                }</li>
+            </ul>
+            <p>s.a. Wikipedia 
+              <a href="https://de.wikipedia.org/wiki/Unicodeblock_Verschiedene_Symbole"
+                 target="extern">verschiedene Symbole</a>
+            </p>
+          </article>
+        </article>
+
+        <article id="a02">
+          <h1>Bilder</h1>
+          <p>Bilder werden über den URL referenziert <span>Euer &nbsp; </span></p>
+          <p>Mit der CSS-Anweisung:</p>
+          <code>p>span::after { content : url(<i>adresse</i>); }</code>
+        </article>
+
+        <article id="a03">
+          <h1>Attributwerte</h1>
+          <p>Attributwerte werden über die Funktion attr(<i>name</i>) referenziert</p>
+          <p>PseudoElemente findet man bei 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">MDN <br></a></p>
+          <p>Mit der CSS-Anweisung:</p>
+          <code>p>a::after {
+                              content         : "("attr(href)")";
+                              text-decoration : none;
+                              color           : black;
+                            }</code>
+
+        </article>
+      </section>
+
+      <section>
+        <h1>Zusätzliche Elemente</h1>
+        <p>Sowohl der erste Buchstabe als auch die erste Zeile eines Textes
+           lassen sich auswählen;<br/>
+           Diese werden dann in ein zusätzliches Element eingeschlossen.</p>
+        <p>Während sich das erste Zeichen über ein <code>&lt;span&gt;</code>-Element
+           leicht auszeichnen lässt, ist dies bei der ersten Zeile - zumindest mit CSS - nicht möglich.</p>
+        
+        <article id="a04">
+          <h1>Erstes Zeichen</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Fusce ultricies neque non orci varius tempor.
+             Aliquam vitae tortor hendrerit, venenatis quam quis, mollis enim.
+             Sed vel volutpat turpis. 
+             Suspendisse neque tellus, semper ac posuere a, pellentesque at metus.
+             Sed ex orci, condimentum sed sollicitudin non, maximus eget turpis. Aliquam non ante lectus.
+             Praesent interdum dolor sed sapien ornare, ut venenatis nibh scelerisque.</p>
+          <p>Mit der CSS-Anweisung:</p>
+          <code>h1+p::first-letter { font-size : 3.0em; font-weight : bold; float : left; ...}</code>
+          <p>Quelle: <a href="https://lipsum.com/" target="extern"></a></p>
+        </article>
+
+        <article id="a05">
+          <h1>Erste Zeile</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+             Fusce ultricies neque non orci varius tempor.
+             Aliquam vitae tortor hendrerit, venenatis quam quis, mollis enim.
+             Sed vel volutpat turpis. 
+             Suspendisse neque tellus, semper ac posuere a, pellentesque at metus.
+             Sed ex orci, condimentum sed sollicitudin non, maximus eget turpis. Aliquam non ante lectus.
+             Praesent interdum dolor sed sapien ornare, ut venenatis nibh scelerisque.</p>
+          <p>Mit der CSS-Anweisung:</p>
+          <code>h1+p::first-line { font-weight : bold; }</code>
+        </article>
+      </section>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+      <p><a href="02_Selektoren.ppt" download>Folie</a></p>
+      <p>s.a. Buch S.216&fflig;</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>zur Übersicht <a href="index.html">Kapitel 02</a></p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | weitere pseudoklassen</title>
+    <meta name="description" content="HTML5/CSS strukturelle Pseudoklassen">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      body {
+        max-width : 800px;
+        margin    : auto;
+      }
+
+      section {
+        margin-top : 100px;
+        display     : none;
+      }
+
+      hr {
+        height : 5px;
+        background : green;
+      }
+
+      section:target {
+        display : block;
+        border : solid 1px black;
+        padding : 1em;
+      }
+
+      #a02>p:not(.nein) {
+        font-weight : bold;
+      }
+
+      #a03 input:enabled {
+        background : yellow;
+        font-weight : bold;
+      }
+
+      #a03 input:disabled {
+        color : gray;
+        text-decoration : line-through;
+      }
+      #a03 input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border : solid 1px black;
+        width  : 20px;
+        height : 20px;
+        background : yellow;
+        transition: 0.5s all linear;
+      }
+      #a03 input:checked {
+        background : red;
+        border     : solid 5px black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>weitere Pseudoklassen</h1>
+      <nav>
+        <ul>
+          <li><a href="#a01">Abschnitt 1 (target)</a></li>
+          <li><a href="#a02">Abschnitt 2 (not)</a></li>
+          <li><a href="#a03">Abschnitt 3 (Formular)</a></li>
+          <li><a href="#a04">Abschnitt 4 (nix)</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <section id="a01">
+        <h1>:target</h1>
+        <pre>
+section {
+  margin-top : 100px;
+  display     : none;
+}
+
+section:target {
+  display : block;
+  border : solid 1px black;
+  padding : 1em;
+}</pre>
+        <p>Lediglich das Verweisziel wird angezeigt...
+        </p>
+      </section>
+
+      <section id="a02">
+          <h1>:not</h1>
+          <pre>
+#a02>p:not(.nein) {
+  font-weight : bold;
+}</pre>
+        <p class="nein">Absatz 1</p>
+        <p>Absatz 2</p>
+        <p>Absatz 3</p>
+        <p class="nein">Absatz 4</p>
+        <p>Absatz 5</p>
+        <p class="nein">Absatz 6</p>
+      </section>
+
+      <section id="a03">
+        <h1>Formularfelder</h1>
+        <pre>
+#a03 input:enabled {
+  background : yellow;
+  font-weight : bold;
+}
+
+#a03 input:disabled {
+  color : gray;
+  text-decoration : line-through;
+}</pre>
+      <fieldset>
+        <legend>Benutzereingaben</legend>
+        <label>Eingabe: <input type="text" value="Eingabe möglich"></label>
+        <label>Ausgabe: <input type="text" value="keine Eingabe" disabled></label><br>
+        <label>A <input type="radio" name="gruppe">
+               B <input type="radio" name="gruppe">
+               C <input type="radio" name="gruppe">
+        </label>
+      </fieldset>
+      
+    </section>
+
+    </main>
+
+    <aside id="aside" role="note, complementary">
+      <p><a href="02_Selektoren.ppt" download>Folie</a></p>
+      <p>s.a. Buch S.228&fflig;</p>
+    </aside>
+    
+    <footer id="footer" role="contentinfo">
+      <p>zur Übersicht <a href="index.html">Kapitel 02</a></p>
+    </footer>
+  </body>
+</html>

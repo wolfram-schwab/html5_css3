@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | dynamische pseudoklassen</title>
+    <meta name="description" content="HTML5/CSS dynamische Pseudoklassen">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      body {
+        max-width : 800px;
+        margin    : auto;
+      }
+      
+      section {
+        margin-top : 800px;
+      }
+      
+      li {
+        display    : inline-block;
+        width      : 7em;
+        border     : solid 1px gray;
+        text-align : center;
+        height     : 1.5em;
+      }
+      
+      a {
+        text-decoration : none;
+        color           : black;
+      }
+      
+      a:link {
+        color : gray;
+      }
+
+      a:visited {
+        color : silver;
+      }
+      
+      a:active {
+        color : red;
+      }
+
+      a:hover {
+        font-weight : bold;
+      }
+
+      a:focus {
+        text-decoration : underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>dynamische Pseudoklassen</h1>
+      <p>sind abhängig von Aktionen des Benutzers</p>
+      <nav>
+        <ul>
+          <li><a href="#a01">Abschnitt 1</a></li>
+          <li><a href="#a02">Abschnitt 2</a></li>
+          <li><a href="#a03">Abschnitt 3</a></li>
+          <li><a href="#a04">Abschnitt 4</a></li>
+          <li><a href="#a05">Abschnitt 5</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 id="a01">:link noch nicht besucht</h1>
+        <pre>
+a:link {
+  color : gray;
+}</pre>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+
+      <section>
+        <h1 id="a02">:visited besucht</h1>
+        <pre>
+a:visited {
+  color : silver;
+}</pre>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+
+      <section>
+        <h1 id="a03">:active derzeit aktiv</h1>
+        <pre>
+a:active {
+  color : red;
+}</pre>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+
+      <section>
+        <h1 id="a04">:hover Mauszeiger</h1>
+        <pre>
+a:hover {
+  font-weight : bold;
+}</pre>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+
+      <section>
+        <h1 id="a05">:focus (Tastaturfocus)</h1>
+        <pre>
+a:focus {
+  text-decoration : underline;
+}</pre>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+        <p><a href="02_Selektoren.ppt" download>Folie</a></p>
+      </aside>
+      
+      <footer id="footer" role="contentinfo">
+        <p>zur Übersicht <a href="index.html">Kapitel 02</a></p>
+      </footer>
+    </body>
+</html>

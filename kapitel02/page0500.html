@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | attributselektoren</title>
+    <meta name="description" content="HTML5/CSS Attributselektoren">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all" id="style">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      body {
+        max-width : 800px;
+        margin    : auto;
+      }
+
+      section h1[title]::after {
+        content : " (mit Titel)";
+      }
+      
+      section p[title^="A"]::before {
+        content : "Absatz: ";
+        color   : red;
+      }
+      
+      section p[title*="Para"]::before {
+        content : "§ ";
+        color   : red;
+        font-weight : bold;
+      }
+
+      
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Attributselektoren</h1>
+      <p>Auswahl über Attribute</p>
+    </header>
+    <main>
+      <section>
+        <h1 title="Abschnitt 1">Vorhandensein</h1>
+        <pre>h1[title]::after {
+  content : " (mit Titel)";
+}</pre>
+        <p title="Absatz 1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+        <p title="Absatz 1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+      <section>
+        <h1>Anfang</h1>
+        <pre>
+section p[title^="A"]::before {
+  content : "Absatz: ";
+  color   : red;
+}</pre>
+      <p title="Absatz 1">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+        <p title="Absatz 2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+      <section>
+        <h1 title="Abschnitt 3">Enthaltensein</h1>
+        <pre>
+section p[title*="Para"]::before {
+  content : "§ ";
+  color   : red;
+  font-weight : bold;
+}</pre>
+        <p title="1. Paragraph:...">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+        <p title="2. Paragraph (letzter)">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+           sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+           sed diam voluptua.</p>
+      </section>
+    </main>
+
+    <aside id="aside" role="note, complementary">
+        <p><a href="02_Selektoren.ppt" download>Folie</a></p>
+        <p>s.a. Buch S.213&fflig;</p>
+      </aside>
+      
+      <footer id="footer" role="contentinfo">
+        <p>zur Übersicht <a href="index.html">Kapitel 02</a></p>
+      </footer>
+    </body>
+</html>
