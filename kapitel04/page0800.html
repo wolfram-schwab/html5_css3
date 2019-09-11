@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | transformationen</title>
+
+    <meta name="description" content="Box-Layout  Transformationen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+   
+    <style>
+      section {
+        height     : 500px;
+        margin-top : 300px;
+      }
+
+      section div {
+        width      : 300px;
+        height     : 100px;
+        border     : solid 1px black;
+        transition : 3s ease;
+        transform-origin: 50%  0;
+      }
+
+      #s01:hover div {
+        transform : translate(100px, 50px);
+      }
+      #s02:hover div {
+        transform : scale(1.5, 0.8);
+      }
+      #s03:hover div {
+        transform : rotate(90deg);
+      }
+      #s04:hover div {
+        transform : rotate(180deg);
+        transform-origin: 0  0;
+      }
+
+      #s05:hover div {
+        transform : rotate(720deg) translateX(400px);
+      }
+
+      section>pre>a::before {
+        content   : '\2b06';
+        font-size : 1.5rem;
+        display   : inline-block;
+        width     : 2.0rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header role="banner" id="top">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Boxgestaltung</h2>
+        <h3>Transformationen</h3>
+        <ol>
+          <li><a href="#s01">Verschieben</a></li>
+          <li><a href="#s02">Skalieren</a></li>
+          <li><a href="#s03">Rotieren</a></li>
+          <li><a href="#s04">Ursprung</a></li>
+          <li><a href="#s05">Kombination</a></li>
+        </ol>
+      </nav>
+
+    </header>
+
+    <main>
+      <section id="s01">
+        <pre><a href="#top"></a> transform : translate(100px, 50px);
+        </pre>
+        <hr/>
+        <div></div>
+      </section>
+
+      <section id="s02">
+        <pre><a href="#top"></a> transform : scale(1.5, 0.8);
+        </pre>
+        <hr/>
+        <div></div>
+      </section>
+
+      <section id="s03">
+        <pre><a href="#top"></a> transform : rotate(90deg);
+        </pre>
+        <hr/>
+        <div></div>
+      </section>
+
+      <section id="s04">
+        <pre><a href="#top"></a> transform : rotate(180deg);
+    transform-origin: 0  0;
+          </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+
+      <section id="s05">
+        <pre><a href="#top"></a> transform : rotate(720deg) translateX(400px);
+        </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+
+      <p>S.a. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+                target="doc">MDN transform</a></p>
+  
+        <p>S.a. Unterlage S.272</p>
+
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

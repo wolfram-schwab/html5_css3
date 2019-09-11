@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | collapsing margins</title>
+
+    <meta name="description" content="Box-Layout  Collapsing Margins">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+   
+    <style>
+      section {
+        margin     : 0;
+        background : yellow;
+        padding    : 0.5em 1.0em;
+        border     : solid 1px hsl(90 50% 50%);
+      }
+
+      section>pre>a::before {
+        content   : '\2b06';
+        font-size : 1.5rem;
+        display   : inline-block;
+      }
+      
+      section>p {
+        margin     : 0;
+        text-align : justify;
+      }
+      
+      #s01 {
+        margin-bottom : 0px;
+      }
+
+      #s02 {
+        margin-top    : 50px;
+        margin-bottom : 50px;
+      }
+
+      #s03 {
+        margin-top    : 50px;
+        margin-bottom :  0px;
+      }
+
+      .schmal {
+        width   : 170px;
+        display : inline-block;
+      }
+
+      #s04 {
+        margin-right : 0px;
+      }
+
+      #s05 {
+        margin-left  : 50px;
+        margin-right : 50px;
+      }
+
+      #s06 {
+        margin-left  : 50px;
+        margin-right : 0px;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+    <header role="banner" id="top">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Boxgestaltung</h2>
+        <h3>Collapsing Margins</h3>
+        <p>Nur Vertikal!</p>
+        <ol>
+          <li><a href="#s01">kein Margin</a></li>
+          <li><a href="#s02">Margin oben und unten</a></li>
+          <li><a href="#s03">Margin oben</a></li>
+        </ol>
+
+        <h3>Horizontal</h3>
+        <ol>
+            <li><a href="#s04">kein Collaps</a></li>
+          </ol>
+        </nav>
+
+    </header>
+
+    <main>
+      <section id="s01">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <pre><a href="#top"></a> margin-bottom : 0px</pre>
+      </section>
+
+      <section id="s02">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <pre><a href="#top"></a> margin-top : 50px; margin-bottom : 50px</pre>
+      </section>
+  
+      <section id="s03">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <pre><a href="#top"></a> margin-top : 50px; margin-bottom : 0px</pre>
+      </section>
+
+      <p><strong>Beide vertikalen Zwischenräume sind gleich groß!</strong></p>
+      <hr/>
+
+
+      <h4>Horizontale Anordnung</h4>
+      <section id="s04" class="schmal">
+        <p>ein bisschen Text...</p>
+        <pre>margin-left:0px
+margin-right:0px
+<a href="#top"></a></pre>
+      </section><section id="s05" class="schmal">
+        <p>ein bisschen Text...</p>
+        <pre>margin-left:50px
+margin-right:50px
+<a href="#top"></a></pre>
+      </section><section id="s06" class="schmal">
+        <p>ein bisschen Text...</p>
+        <pre>margin-left:50px
+margin-right:0px
+<a href="#top"></a></pre>
+      </section>
+      <p><strong>Horizontal addieren sich die Margins</strong></p>
+      <hr/>
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+      <p>s. Unterlage S. 260&fflig;</p>
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

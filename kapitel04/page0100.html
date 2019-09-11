@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | klassisch</title>
+
+    <meta name="description" content="Box-Layout  klassisch vs. neu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+   
+    <style>
+      section {
+        margin-top : 500px;
+        background-image: url(../resources/images/massstab.png);
+        background-repeat: repeat-x;
+        padding-top : 20px;
+      }
+      section>pre>a::before {
+        content   : '\2b06';
+        font-size : 1.5rem;
+        display   : inline-block;
+        width     : 3.0rem;
+      }
+      
+      section>p {
+        margin     : 0;
+        text-align : justify;
+        background : yellow;
+
+        box-sizing : content-box;
+        /* box-sizing : border-box; */
+      }
+      
+      #s01>p {
+        width : 500px;
+      }
+
+      #s02>p {
+        width   : 500px;
+        padding : 50px;
+      }
+
+      #s03>p {
+        width   : 500px;
+        padding : 50px;
+        border  : solid 25px #990;
+      }
+      #s04>p {
+        width   : 500px;
+        padding : 50px;
+        border  : solid 25px #990;
+        margin  : 0 50px;
+      }
+    </style>
+
+    <script>
+        function border() {
+          let absaetze = document.querySelectorAll("section>p");
+          absaetze.forEach(e=>{ console.log(e); e.setAttribute("style", "box-sizing:border-box");});
+        }
+        function content() {
+          let absaetze = document.querySelectorAll("section>p");
+          absaetze.forEach(e=>{ console.log(e); e.setAttribute("style", "box-sizing:content-box");});
+        }
+    </script>
+  </head>
+
+  <body>
+    <header role="banner" id="top">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Boxgestaltung</h2>
+        <h3>klassisch / neu</h3>
+        <p>klassisch: <input type="button" onclick="content()" value="box-sizing : content-box"/></p>
+        <p>neu: <input type="button" onclick="border()" value="box-sizing : border-box"/></p>
+        <ol>
+          <li><a href="#s01">Breite</a></li>
+          <li><a href="#s02">Breite + padding</a></li>
+          <li><a href="#s03">Breite + padding + border</a></li>
+          <li><a href="#s04">Breite + padding + border + margin</a></li>
+        </ol>
+      </nav>
+
+    </header>
+
+    <main>
+      <section id="s01">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <pre><a href="#top"></a> width : 500px;</pre>
+      </section>
+
+      <section id="s02">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <pre><a href="#top"></a>width : 500px; padding : 50px;</pre>
+      </section>
+
+      <section id="s03">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <pre><a href="#top"></a>width : 500px; padding : 50px; border : 25px;</pre>
+      </section>
+  
+      <section id="s04">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+          sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <pre><a href="#top"></a>width : 500px; padding : 50px; border : 25px; margin : 0 50px;</pre>
+      </section>
+  
+
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+      <p>s. Unterlage S. 260&fflig;</p>
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

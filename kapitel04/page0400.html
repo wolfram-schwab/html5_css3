@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | runde ecken</title>
+
+    <meta name="description" content="Box-Layout  Ecken abrunden">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+   
+    <style>
+      section {
+        margin-top : 500px;
+      }
+
+      section div {
+        width  : 100px;
+        height : 100px;
+        border : solid 1px black; 
+      }
+
+      #s01 div {
+        border-radius: 10px;
+      }
+      
+      #s02 div {
+        border-radius: 10px 20px;
+      }
+      
+      #s03 div {
+        border-radius: 10px 60px 20px 40px;
+      }
+
+      #s04 div {
+        border-radius: 50px;
+      }
+
+      #s05 div {
+        border-radius: 10%;
+      }
+
+      #s06 div {
+        border-radius: 30%;
+        width        : 200px;
+      }
+
+      section>pre>a::before {
+        content   : '\2b06';
+        font-size : 1.5rem;
+        display   : inline-block;
+        width     : 2.0rem;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <header role="banner" id="top">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Boxgestaltung</h2>
+        <h3>Rahmen Rundung</h3>
+        <ol>
+          <li><a href="#s01">alle 4 Ecken gleich</a></li>
+          <li><a href="#s02">2 Angaben</a></li>
+          <li><a href="#s03">4 Angaben</a></li>
+          <li><a href="#s04">Kreis</a></li>
+          <li><a href="#s05">Prozent</a></li>
+          <li><a href="#s05">Prozent Rechteck</a></li>
+        </ol>
+      </nav>
+
+    </header>
+
+    <main>
+      <section id="s01">
+        <pre><a href="#top"></a> border-radius: 10px;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s02">
+        <pre><a href="#top"></a> border-radius: 10px 20px;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s03">
+        <pre><a href="#top"></a> border-radius: 10px 60px 20px 40px;;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s04">
+        <pre><a href="#top"></a> border-radius: 50px;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s05">
+        <pre><a href="#top"></a> border-radius: 10%;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s06">
+        <pre><a href="#top"></a> border-radius: 30%;
+    width        : 200px;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

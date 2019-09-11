@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | übergänge</title>
+
+    <meta name="description" content="Box-Layout  Übergänge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+   
+    <style>
+      section {
+        height     : 500px;
+      }
+
+      section div {
+        width      : 100px;
+        height     : 100px;
+        border     : solid 1px black;
+        background : yellow; 
+      }
+
+      section:hover div {
+        margin-left : 100px;
+        width       : 200px;
+        height      :  50px;
+        background  : red;
+      }
+      
+      #s02 div {
+        transition-duration: 3s;
+      }
+      
+      #s03 div {
+        transition-duration: 3s;
+        transition-delay   : 500ms;
+     }
+
+      #s04 div {
+        transition-duration: 3s;
+        transition-delay   : 500ms;
+        transition-timing-function: ease;
+      }
+
+      #s05 div {
+        transition-duration: 2s;
+        transition-timing-function: steps(5);
+      }
+
+      section>pre>a::before {
+        content   : '\2b06';
+        font-size : 1.5rem;
+        display   : inline-block;
+        width     : 2.0rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <header role="banner" id="top">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Boxgestaltung</h2>
+        <h3>fließende Übergänge</h3>
+        <ol>
+          <li><a href="#s01">ohne Fließen</a></li>
+          <li><a href="#s02">Dauer</a></li>
+          <li><a href="#s03">Dauer, Verzögerung</a></li>
+          <li><a href="#s04">Dauer, Verzögerung, sanft</a></li>
+          <li><a href="#s05">Schritte, start / end</a></li>
+        </ol>
+      </nav>
+
+    </header>
+
+    <main>
+      <section id="s01">
+        <pre>
+          
+          </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s02">
+        <pre><a href="#top"></a> transition-duration: 3s;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s03">
+        <pre><a href="#top"></a> transition-duration: 3s;
+    transition-delay   : 500ms;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s04">
+        <pre><a href="#top"></a> transition-duration: 3s;
+    transition-delay   : 500ms;
+    transition-timing-function: ease;
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+
+      <section id="s05">
+        <pre><a href="#top"></a> transition-duration: 2s;
+    transition-timing-function: steps(5);
+        </pre>
+        <hr/>
+        <div/>
+      </section>
+      <hr/>
+
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+
+      <p>S.a. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions"
+                target="doc">MDN Transitions</a></p>
+
+        <p>S.a. Unterlage S.280</p>
+
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>

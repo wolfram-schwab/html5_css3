@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen | box-layout | Farbverläufe</title>
+
+    <meta name="description" content="Box-Layout  Farbverläufe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link href="../resources/styles/normalize.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="../resources/styles/my.css" rel="stylesheet" media="all">
+   
+    <style>
+      section {
+        height     : 500px;
+        margin-top : 300px;
+      }
+
+      section div {
+        width      : 500px;
+        border     : solid 1px black;
+      }
+
+      section div p {
+        font-size  : 50px;
+        font-weight: bold;
+        text-align : center;
+        margin     : 100px;
+      }
+
+      #s01 div {
+        background : linear-gradient(0deg, black, white);
+      }
+      #s02 div {
+        background : linear-gradient(30deg, black, white);
+      }
+      
+      #s03 div {
+        background : linear-gradient(90deg, black 30%, white);
+     }
+
+      #s04 div {
+        background : linear-gradient(180deg, red, blue, green);
+      }
+
+      #s05 div {
+        background : linear-gradient(270deg, red 25%, blue 30% 70%, green 75%);
+      }
+
+      
+      section>pre>a::before {
+        content   : '\2b06';
+        font-size : 1.5rem;
+        display   : inline-block;
+        width     : 2.0rem;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <header role="banner" id="top">
+
+      <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+      <nav role="navigation">
+        <h2>Boxgestaltung</h2>
+        <h3>Farbverläufe</h3>
+        <ol>
+          <li><a href="#s01">0°</a></li>
+          <li><a href="#s02">30°</a></li>
+          <li><a href="#s03">90° / 30%</a></li>
+          <li><a href="#s04">180% rot blau grün</a></li>
+          <li><a href="#s05">270% rot blau grün mit Intervallen</a></li>
+        </ol>
+      </nav>
+
+    </header>
+
+    <main>
+      <section id="s01">
+        <pre><a href="#top"></a> background : linear-gradient(0deg, black, white);
+        </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+
+      <section id="s02">
+        <pre><a href="#top"></a> background : linear-gradient(30deg, black, white);
+        </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+
+      <section id="s03">
+        <pre><a href="#top"></a> background : linear-gradient(90deg, black 30%, white);
+        </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+
+      <section id="s04">
+        <pre><a href="#top"></a> background : linear-gradient(180deg, red, blue, green);
+        </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+
+      <section id="s05">
+        <pre><a href="#top"></a> background : linear-gradient(270deg, red 25%, blue 30% 70%, green 75%);
+        </pre>
+        <hr/>
+        <div><p>Farbe</p></div>
+      </section>
+
+    </main>
+
+    <aside role="complementary">
+      <h3>Ergänzend</h3>
+
+      <p>S.a. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient"
+                target="doc">MDN linearer Gradient</a><br/>
+        und <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient"
+        target="doc">MDN radialer Gradient</a></p>
+  
+        <p>S.a. Unterlage S.272</p>
+
+      <p><a href="04_Boxgestaltung.ppt" download>Folie</a></p>
+
+    </aside>
+
+    <footer role="contentinfo">
+      <p><a href="index.html">zurück</a> zur Übersicht</p>
+    </footer>
+
+  </body>
+</html>
