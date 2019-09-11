@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">  
+  
+  <title>Flexible Boxes - Kontakt</title>
+  
+  <meta name="description" content="Die Beispielseiten für das Buch Flexible Boxes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/normalize.css" rel="stylesheet" media="all">
+  <link href="css/styles.css" rel="stylesheet" media="all">  
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv-printshiv.txt" media="all"></script>
+  <![endif]-->
+</head>
+
+<body class="kontakt">
+
+<header role="banner" class="pageheader">
+  <div class="hgroup">  
+    <h1 lang="en"><a href="index.html" title="Zur Startseite">Flexible Boxes</a></h1>
+    <p class="slogan">Einführung ins responsive Webdesign</p>
+  </div>
+</header>
+
+<nav role="navigation" id="nav" class="navmain">
+  <h2 class="hideme">Navigation</h2>
+  
+  <ul class="navlist">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="news.html" lang="en">News</a></li>
+    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+  </ul>
+
+</nav>
+
+<main role="main" aria-labelledby="content">
+  <section id="content">
+    <header>
+      <h2>Kontakt</h2>
+      <p class="subtitle">Was können wir für Sie tun?</p>
+    </header>
+    <p>Bitte füllen Sie alle Formularfelder aus.</p>
+    <form id="kontaktformular" class="kontaktformular" action="#">
+    <div>  
+      <label for="besuchername">Ihr Name </label>
+      <input type="text" id="besuchername" name="besuchername" autofocus required>
+    </div>
+    <div>
+      <label for="besuchermail">Ihre E-Mail </label>
+      <input type="email" id="besuchermail" name="besuchermail" required>
+    </div>
+    <div>
+      <label>Ihre Nachricht </label>
+      <textarea id="nachricht" name="nachricht" cols="20" rows="5"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="Abschicken">
+    </div>
+    </form>  
+    
+  </section>
+</main>    
+  
+<footer role="contentinfo" class="pagefooter">
+  <h2 class="hideme">Infos über diese Website</h2>
+
+  <small>&copy; <time datetime="2015">2015</time> Ihr Name | <a href="#">Impressum</a></small>
+    
+  <address><p>Name | Straße | PLZ Ort | Land </p></address>
+
+</footer>
+ 
+</body>
+</html>

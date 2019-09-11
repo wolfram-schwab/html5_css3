@@ -1,0 +1,12 @@
+Aufgabe 2:  HTML5Bones - Beispielseiten 
+Betrachten Sie die HTML Seiten aus dem Ordner Aufgaben/02_Beispielseiten. 
+Machen Sie sich mit den Techniken von HTML5Bones 
+und den Inhalten der Beispielseiten des Begleitbuches vertraut. 
+Übertragen Sie die CSS Regeln aus Aufgabe 1 
+in den Abschnitt  /* Author' s styles */ der  Datei css/styles.css. 
+Betrachten Sie anschließend die Beispielseiten 
+index.html, kontakt.html und news.html 
+im Browser und im Editor.  
+Welche semantischen Strukturelemente werden jeweils eingesetzt? 
+Wenn Sie nachlesen möchten: 
+Kapitel 7 des Begleitbuches enthält eine ausführliche Beschreibung der Beispielseiten). 

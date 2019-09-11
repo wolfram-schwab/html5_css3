@@ -1,0 +1,10 @@
+Aufgabe 1: Semantische Bereiche  
+Bearbeiten Sie 01_Semantik.html aus dem Ordner Aufgaben.
+Ersetzen Sie die Bereichselemente div 
+durch passende semantische Strukturelemente 
+header, footer, main, nav, section, article und aside. 
+Belassen Sie die in der Datei vorhandenen CSS Regeln. 
+Betrachten Sie abschließend Ihre Lösung im Browser.  
+Haben alle Sectioning Elemente 
+(sind mittels CSS durch eine Umrandung gekennzeichnet) 
+eine Überschrift?

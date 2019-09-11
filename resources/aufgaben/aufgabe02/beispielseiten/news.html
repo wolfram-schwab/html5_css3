@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">  
+  
+  <title>Flexible Boxes - News</title>
+  
+  <meta name="description" content="Die Beispielseiten für das Buch Flexible Boxes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="css/normalize.css" rel="stylesheet" media="all">
+  <link href="css/styles.css" rel="stylesheet" media="all">  
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv-printshiv.txt" media="all"></script>
+  <![endif]-->
+</head>
+
+<body class="news">
+
+<header role="banner" class="pageheader">
+  <div class="hgroup">  
+    <h1 lang="en"><a href="index.html" title="Zur Startseite">Flexible Boxes</a></h1>
+    <p class="slogan">Einführung ins responsive Webdesign</p>
+  </div>
+</header>
+
+<nav role="navigation" id="nav" class="navmain">
+  <h2 class="hideme">Navigation</h2>
+  
+  <ul class="navlist">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="news.html" lang="en" class="active">News</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+
+</nav>
+
+<!-- <main> is useful for ARIA, but not sectioning --> 
+<main role="main" aria-labelledby="content">
+  <!-- <section> begins new section for outline algorithm, ID maybe useful as fragment identifier --> 
+  <section id="content">
+    <header>
+      <h2 lang="en">News</h2>
+      <p class="subtitle">Neues aus der Weltgeschichte</p>
+    </header>
+   <article id="a1">
+      <header>
+      <h3><a href="#">Webstandards</a></h3>
+      <p class="artikelinfo"><span class="autor">Peter Müller</span> | <time datetime="2013-03-25">20. Mai 2013</time></p>
+      </header>
+      
+      <p>Ich bin zwar nur ein Fülltext, aber wenn Sie nun schon die Güte haben, mich ein paar weitere Sätze lang zu begleiten, möchte ich diese Gelegenheit nutzen, Ihnen nicht nur als Lückenfüller zu dienen, sondern auf etwas hinzuweisen, das es ebenso verdient wahrgenommen zu werden: Webstandards nämlich.</p>
+      
+      <div class="readmore"><a href="#">Weiterlesen...</a></div>  
+    </article>
+
+    <article id="a2">
+      <header>
+      <h3><a href="#">Hinter den Wortbergen</a></h3>
+      <p class="artikelinfo"><span class="autor">Anonymous</span> | <time datetime="2006-03">März 2006</time></p>
+      </header>
+      
+      <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. </p>
+      <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben. </p>
+
+      <div class="readmore"><a href="#">Weiterlesen...</a></div>  
+    </article>
+
+    <article id="a3">
+      <header>
+      <h3><a href="#">Werther. Frisch verliebt.</a></h3>
+      <p class="artikelinfo"><span class="autor">Johann Wolfgang</span> | <time datetime="1774-09-29">29. September 1774</time></p>
+      </header>
+
+      <p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.</p>
+      <p>Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken.</p>
+
+      <div class="readmore"><a href="#">Weiterlesen...</a></div>  
+    </article>
+  </section>
+</main>    
+<!-- <aside> begins new section on same level as <h2>News</h2> --> 
+<aside role="complementary" id="linklisten" class="linklisten">
+  <h2 class="hideme">Linklisten</h2>
+
+  <section id="lesetipps"> 
+    <h3>Lesetipps</h3>
+    <ul>
+      <li><a href="#">Responsives Webdesign</a></li>      
+      <li><a href="#">Was ist »<span lang="en">mobile</span>«?</a></li>      
+      <li><a href="#">Das Interweb</a></li>      
+    </ul>
+  </section>
+
+  <section id="tagcloud">
+    <h3>Schlagworte</h3>
+    <ul class="tags">
+      <li><a href="#">Webstandards</a></li>
+      <li><a href="#">Bloggen</a></li>
+      <li><a href="#">RWD</a></li>
+      <li><a href="#" lang="en">Mobile</a></li>
+      <li><a href="#">Top10</a></li>
+    </ul>
+  </section>
+
+</aside>
+  
+<footer role="contentinfo" class="pagefooter">
+  <h2 class="hideme">Infos über diese Website</h2>
+
+  <small>&copy; <time datetime="2015">2015</time> Ihr Name | <a href="#">Impressum</a></small>
+    
+  <address><p>Name | Straße | PLZ Ort | Land </p></address>
+
+</footer>
+
+</body>
+</html>
