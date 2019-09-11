@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+
+    <title>html | erweiterungen</title>
+
+    <!-- Enter a brief description of your page -->
+    <meta name="description" content="Erweiterungskurs für HTML5 und CSS">
+
+    <!-- Define a viewport to mobile devices to use 
+       - telling the browser to assume that the page is as wide as the device (width=device-width),
+         and setting the initial page zoom level to be 1 (initial-scale=1.0),
+         and fixing width=device-width for iOS9 (shrink-to-fit=no) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Add normalize.css 
+         which enables browsers to render all elements more consistently 
+         and in line with modern standards 
+         as it only targets particular styles that need normalizing -->
+    <link href="resources/styles/normalize.css" rel="stylesheet" media="all">
+    <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5)
+         use normalize-legacy.css instead -->
+    <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
+
+    <!-- Include the site stylesheet -->
+    <link href="resources/styles/bones.css" rel="stylesheet" media="all">
+    <link href="resources/styles/my.css" rel="stylesheet" media="all" id="style">
+
+    <style>
+      nav {
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration : none;
+      }
+      nav>ol {
+        border1   : solid 1px black;
+        width    : 12.0rem;
+        position : relative;
+        word-break: keep-all;
+      }
+      nav>ol>li {
+        position       : relative;
+        margin-bottom  : 0.5em;
+        border-bottom  : dashed 1px white;
+      }
+      nav>ol>li:hover {
+        border-bottom-color  : black;
+      }
+      nav>ol>li>span {
+        display : none;
+      }
+      nav>ol>li:hover>span {
+        display : inline;
+      }
+
+      nav>ol>li>ol {
+        display      : none;
+        position     : absolute;
+        top          : 0.2rem;
+        margin-left  : 10.0em;
+        padding-left : 2.0em;
+        width        : 12.0rem;
+        background   : white;
+      }
+      nav>ol>li:hover>ol {
+        display     : block;
+      }
+      
+    </style>
+
+    <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+    <!--[if lt IE 9]><script src="resources/scropts/html5shiv-print.js" media="all"></script><![endif]-->
+  </head>
+
+  <body>
+
+    <!-- The page header typically contains items 
+         such as your site heading, logo 
+         and possibly the main site navigation -->
+    <!-- ARIA: the landmark role "banner" is set 
+         as it is the prime heading or internal title of the page -->
+    <header role="banner">
+
+        <h1><abbr title="HyperText Markup Language 5">HTML5</abbr> und <abbr title="Cascading Style Sheets">CSS</abbr> Erweiterungen</h1>
+
+        <!-- ARIA: the landmark role "navigation" is added here
+                   as the element contains site navigation
+             NOTE: The <nav> element does not have to be contained within a <header> element,
+                   even though the two examples on this page are. -->
+        <nav role="navigation">
+          <h2>Inhalt</h2>
+          <ol>
+            <li><a href="kapitel01/index.html">Grundlagen</a>
+              <ol>
+                <li><a href="kapitel01/page0100.html">HTML5 Grundgerüst</a></li>
+                <li><a href="kapitel01/page0200.html">Bereiche</a></li>
+                <li><a href="kapitel01/page0300.html">Aufgabe</a></li>
+                <li><a href="kapitel01/page0400.html">ARIA Landmarks</a></li>
+                <li><a href="kapitel01/page0500.html">HTML5-Bones</a></li>
+                <li><a href="kapitel01/page0600.html">Meta Viewport</a></li>
+                <li><a href="kapitel01/page0700.html">Normalizer</a></li>
+                <li><a href="kapitel01/page0800.html">HTML5Shiv</a></li>
+                <li><a href="kapitel01/page0900.html">Beispiel-Knochen</a></li>
+              </ol>
+            </li>
+            <li><a href="kapitel02/index.html">Selektoren</a>
+              <ol>
+                  <li><a href="kapitel02/page0100.html">Einführung</a></li>
+                  <li><a href="kapitel02/page0200.html">kontextuelle Selektoren</a></li>
+                  <li><a href="kapitel02/page0300.html">Pseudoelemente</a></li>
+                  <li><a href="kapitel02/page0400.html">Counter</a></li>
+                  <li><a href="kapitel02/page0500.html">Attributselektoren</a></li>
+                  <li><a href="kapitel02/page0600.html">dynamische Pseudoklassen</a></li>
+                  <li><a href="kapitel02/page0700.html">strukturelle Pseudoklassen</a></li>
+                  <li><a href="kapitel02/page0800.html">Weitere</a></li>
+                  <li><a href="kapitel02/page0900.html">Übung</a></li>
+              </ol>
+            </li>
+            <li><a href="kapitel03/index.html">Schrift und Text</a>
+              <ol>
+                <li><a href="kapitel03/page0100.html">Webfonts</a></li>
+                <li><a href="kapitel03/page0200.html">Schriftgrößen</a></li>
+                <li><a href="kapitel03/page0300.html">Abstände</a></li>
+                <li><a href="kapitel03/page0400.html">Textschatten</a></li>
+                <!-- li><a href="kapitel03/page0500.html">Iconfonts</a></li -->
+              </ol>
+            </li>
+            <li><a href="kapitel04/index.html">Boxgestaltung</a>
+              <ol>
+                <li><a href="kapitel04/page0100.html">klassisch</a></li>
+                <li><a href="kapitel04/page0200.html">Bilder skalieren</a></li>
+                <li><a href="kapitel04/page0300.html">collapsing Margins</a></li>
+                <li><a href="kapitel04/page0400.html">Ecken</a></li>
+                <li><a href="kapitel04/page0500.html">Schatten</a></li>
+                <li><a href="kapitel04/page0600.html">Übergänge</a></li>
+                <li><a href="kapitel04/page0700.html">Farbverläufe</a></li>
+                <li><a href="kapitel04/page0800.html">Transformieren</a></li>
+              </ol>
+            </li>
+            <li><a href="kapitel05/index.html">Layout-Techniken</a>
+              <ol>
+                <li><a href="kapitel05/page0100.html">Layout-Vergleich</a></li>
+                <li><a href="kapitel05/page0200.html">Flexbox</a></li>
+                <li><a href="kapitel05/page0300.html">Navigation</a></li>
+              </ol>
+            </li>
+            <li><a href="kapitel06/index.html">Media-Queries</a>
+              <ol >
+                <li><a href="kapitel06/page0100.html">Typ, Eigenschaften, Syntax</a></li>
+                <li><a href="kapitel06/page0200.html">Viewport</a></li>
+                <li><a href="kapitel06/page0300.html">Flexibles Grid</a></li>
+              </ol>
+            </li>
+            <!--li><a href="kapitel07/index.html">Responsive Design</a>
+              <ol>
+                <li><a href="kapitel07/page0100.html">Klassischer Workflow</a></li>
+                <li><a href="kapitel07/page0200.html">Heutige Situation</a></li>
+                <li><a href="kapitel07/page0300.html">Begriffe</a></li>
+                <li><a href="kapitel07/page0400.html">Methodik</a></li>
+                <li><a href="kapitel07/page0500.html">"ältere Browser"</a></li>
+              </ol>
+            </li>
+            <li><a href="kapitel08/index.html">Responsive Medien</a>
+              <ol>
+                <li><a href="kapitel08/page0100.html">Grafik und Video</a></li>
+                <li><a href="kapitel08/page0200.html">Art Direction</a></li>
+                <li><a href="kapitel08/page0300.html">Polyfill</a></li>
+                <li><a href="kapitel08/page0400.html">SVG</a></li>
+                <li><a href="kapitel08/page0500.html">Audio</a></li>
+                <li><a href="kapitel08/page0600.html">Video</a></li>
+                <li><a href="kapitel08/page0700.html">IFrames</a></li>
+              </ol>
+            </li -->
+          </ol>
+        </nav>
+
+    </header>
+
+  </body>
+</html>
