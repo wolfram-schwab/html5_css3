@@ -1,0 +1,80 @@
+/* Universalselektor */
+* {
+  box-sizing : border-box;
+}
+
+/* Typselektor */
+html {
+  background-color: hsl(55, 50%, 65%);
+}
+
+body {
+  max-width        : 60rem;
+  margin           : 0 auto;
+  background-color : hsl(60, 50%, 80%);
+  padding          : 0.5rem 1.0rem;
+}
+
+header {
+  margin-bottom : 7.0rem;
+}
+
+main {
+  width  : 55rem;
+}
+
+footer {
+  clear : left;
+}
+
+/* ID-Selektor */
+#tag0 {
+  clear : both;
+}
+
+/* kontextuelle Selektoren */
+header>h1 {
+  text-align: center;
+}
+header>h2 {
+  text-align : left;
+  width      : 40%;
+  float      : left;
+  background : transparent;
+}
+header>h2+h2 {
+  text-align : right;
+  float      : right;
+}
+ 
+main>section {
+  width   : 15rem;
+  border  : solid 1px gray;;
+  padding : 0.5rem 1.0rem;
+  margin  : 0.5rem 1.0rem;
+  float   : left;
+}
+
+main>section>h1 {
+  text-align : center;
+  font-size  : 1.3rem;
+}
+
+main>section>h2 {
+  font-size  : 1.1rem;
+}
+
+main>section>dl>dt {
+  width      : 3.0rem;
+  background : transparent;
+  float      : left;
+  margin-bottom : 0.5rem;
+}
+main>section>dl>dd {
+  margin-bottom : 0.5rem;
+}
+
+/* Klassen */
+.heute { 
+  background : yellow;
+}
